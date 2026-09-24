@@ -1,0 +1,164 @@
+.pagina-pesquisa {
+  min-height: 100vh;
+  background-color: #dfe8db;
+}
+
+.conteudo-pesquisa {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 55px 40px 80px;
+  box-sizing: border-box;
+}
+
+.conteudo-pesquisa h1 {
+  text-align: center;
+  color: #4b651f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0 0 35px;
+}
+
+/* PESQUISA */
+
+.barra-pesquisa {
+  width: 70%;
+  height: 70px;
+  margin: 0 auto 55px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 40px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.barra-pesquisa input {
+  flex: 1;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 0 40px;
+
+  font-size: 18px;
+  color: #555;
+
+  background: transparent;
+}
+
+.barra-pesquisa input::placeholder {
+  color: #666;
+}
+
+.barra-pesquisa button {
+  width: 80px;
+  height: 100%;
+
+  border: none;
+  background: transparent;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* CARDS */
+
+.grade-plantas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.card-planta {
+  background-color: white;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card-planta img {
+  display: block;
+
+  width: 100%;
+  height: 255px;
+
+  object-fit: cover;
+}
+
+.dados-planta {
+  padding: 25px 24px;
+}
+
+.dados-planta h2 {
+  margin: 0 0 12px;
+
+  color: #4b651f;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.dados-planta p {
+  margin: 0;
+
+  color: #111;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.sem-resultados {
+  text-align: center;
+  margin-top: 50px;
+
+  font-size: 20px;
+  color: #4b651f;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .barra-pesquisa {
+    width: 90%;
+  }
+
+  .grade-plantas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+  .conteudo-pesquisa {
+    padding: 40px 20px;
+  }
+
+  .conteudo-pesquisa h1 {
+    font-size: 30px;
+  }
+
+  .barra-pesquisa {
+    width: 100%;
+    height: 60px;
+  }
+
+  .barra-pesquisa input {
+    padding: 0 25px;
+    font-size: 16px;
+  }
+
+  .grade-plantas {
+    grid-template-columns: 1fr;
+  }
+}
